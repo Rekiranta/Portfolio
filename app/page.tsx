@@ -1,392 +1,528 @@
+import Image from "next/image";
 import React from "react";
+
+const projects = [
+  {
+    title: "Cloud Resume Challenge",
+    description:
+      "Serverless resume hosted on AWS with IaC, CDN, CI/CD, and a visitor counter API.",
+    tags: ["AWS", "Terraform", "CI/CD"],
+    link: "https://github.com/Rekiranta/cloud-resume-challenge",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "Kubernetes Home Lab",
+    description:
+      "Bare-metal K3s cluster with GitOps style deployments, monitoring and secrets management.",
+    tags: ["Kubernetes", "GitOps", "Ansible"],
+    link: "https://github.com/Rekiranta/kubernetes-homelab",
+    image: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "Observability Dashboard",
+    description:
+      "Unified Grafana dashboards for pipelines, uptime, and incident response playbooks.",
+    tags: ["Grafana", "Prometheus", "Automation"],
+    link: "https://github.com/Rekiranta/observability-dashboard",
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "Serverless Data Sync",
+    description:
+      "Event-driven ETL that syncs SaaS data to a warehouse with caching and validation steps.",
+    tags: ["Python", "API", "Serverless"],
+    link: "https://github.com/Rekiranta/serverless-data-sync",
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80",
+  },
+];
+
+const blogPosts = [
+  {
+    title: "What I Learned Building My First K8s Home Lab",
+    date: "Dec 2024",
+    excerpt:
+      "Notes on networking hurdles, GitOps workflows, and keeping observability simple enough to maintain.",
+    link: "https://github.com/Rekiranta",
+  },
+  {
+    title: "From Zero to CI/CD: Shipping Faster with Small Steps",
+    date: "Oct 2024",
+    excerpt:
+      "Breaking down CI/CD adoption into weekly goals that work for small teams and solo builders.",
+    link: "https://github.com/Rekiranta",
+  },
+  {
+    title: "Automating Resume Deployments with Terraform",
+    date: "Aug 2024",
+    excerpt:
+      "How IaC keeps my resume, DNS, and CDN consistent while experimenting with new features.",
+    link: "https://github.com/Rekiranta",
+  },
+];
+
+const experiences = [
+  {
+    title: "IT Infrastructure Student",
+    subtitle: "Metropolia University of Applied Sciences",
+    period: "2024 – Present",
+    points: [
+      "Hands-on labs in virtualization, networking, and automation.",
+      "Coursework on cloud architectures, APIs, and service reliability.",
+      "Team projects focused on DevOps culture and tooling.",
+    ],
+  },
+  {
+    title: "Cloud & DevOps Projects",
+    subtitle: "Independent",
+    period: "2023 – Present",
+    points: [
+      "Building CI/CD pipelines, IaC modules, and containerized services.",
+      "Experimenting with monitoring stacks and incident runbooks.",
+      "Documenting learnings through blog-style notes and demos.",
+    ],
+  },
+];
+
+const skills = [
+  "AWS",
+  "Google Cloud",
+  "Terraform",
+  "Docker",
+  "Kubernetes",
+  "GitHub Actions",
+  "Linux",
+  "Ansible",
+  "Helm",
+  "Prometheus",
+  "Grafana",
+  "MySQL",
+  "PostgreSQL",
+  "Python",
+  "TypeScript",
+  "JavaScript",
+  "Node.js",
+  "Bash",
+  "Power BI",
+  "CI/CD",
+  "Git",
+  "Windows Server",
+  "Networking",
+  "APIs",
+];
+
+const socials = [
+  { label: "GitHub", href: "https://github.com/Rekiranta" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/teemurekiranta" },
+  { label: "Email", href: "mailto:Teemu.Rekiranta1@gmail.com" },
+];
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-50">
-      {/* Hero */}
-      <section className="border-b border-slate-800 bg-slate-950">
-        <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 px-6 py-14 text-center">
-          <h1 className="text-3xl font-bold sm:text-4xl">
-            Hi 👋, I am Teemu Rekiranta
-          </h1>
-          <p className="text-sm text-sky-400 sm:text-base">
-            Junior Cloud and DevOps Engineer · IT Infrastructure Student
-          </p>
-          <p className="max-w-2xl text-sm text-slate-300 sm:text-base">
-            Cloud and Infrastructure. Learning fast, building faster.
-          </p>
+    <main className="relative min-h-screen overflow-hidden text-slate-900">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.12),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(56,189,248,0.14),transparent_32%),radial-gradient(circle_at_15%_75%,rgba(14,165,233,0.12),transparent_30%),radial-gradient(circle_at_90%_60%,rgba(59,130,246,0.08),transparent_28%)]" />
 
-          <div className="mt-4 flex flex-wrap justify-center gap-3 text-xs text-slate-400 sm:text-sm">
-            <span>📍 Helsinki, Finland</span>
+      <NavBar />
+
+      <section className="relative mx-auto max-w-6xl px-4 pb-12 pt-14 sm:px-6 lg:px-8">
+        <Hero />
+      </section>
+
+      <section id="about" className="mx-auto max-w-5xl px-4 pb-8 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-lg card-shadow">
+          <p className="text-sm font-semibold text-blue-600">About</p>
+          <h2 className="text-2xl font-bold text-slate-900">A little about me</h2>
+          <p className="mt-3 text-sm text-slate-600">
+            I am a junior Cloud and DevOps engineer who loves turning theory into hands-on builds. My focus areas
+            are cloud platforms, CI/CD, observability, and resilient infrastructure. I am continuously learning and
+            documenting the wins (and lessons) along the way.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects" className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+        <SectionHeading
+          title="My Projects"
+          description="A collection of practical builds showcasing my curiosity for DevOps and cloud."
+        />
+        <div className="mt-6 flex flex-wrap gap-3 rounded-full border border-slate-200 bg-white/70 px-4 py-3 text-sm font-medium text-slate-600 shadow-sm">
+          <span className="rounded-full bg-blue-50 px-3 py-1 text-blue-600">DevOps & Cloud</span>
+          <span className="rounded-full bg-blue-50 px-3 py-1 text-blue-600">Automation</span>
+          <span className="rounded-full bg-blue-50 px-3 py-1 text-blue-600">Reliability</span>
+          <span className="rounded-full bg-blue-50 px-3 py-1 text-blue-600">Observability</span>
+          <span className="rounded-full bg-blue-50 px-3 py-1 text-blue-600">Infrastructure</span>
+        </div>
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          {projects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </div>
+      </section>
+
+      <section id="blogs" className="mx-auto max-w-6xl px-4 pb-14 sm:px-6 lg:px-8">
+        <div className="rounded-[28px] border border-slate-200 bg-white/70 p-8 shadow-lg card-shadow">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="text-sm font-semibold text-blue-600">Blogs</p>
+              <SectionTitle>My Recent Blogs</SectionTitle>
+              <p className="text-sm text-slate-600">
+                Insights, tutorials, and retrospectives on DevOps, cloud technologies, and software craftsmanship.
+              </p>
+            </div>
             <a
               href="https://github.com/Rekiranta"
-              className="hover:text-sky-400"
+              className="mt-2 inline-flex items-center justify-center rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700 transition hover:-translate-y-0.5 hover:shadow-md"
             >
-              GitHub
+              Browse all
             </a>
+          </div>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {blogPosts.map((post) => (
+              <article
+                key={post.title}
+                className="group flex flex-col gap-2 rounded-2xl border border-slate-200 bg-white/80 p-4 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div className="flex items-center justify-between text-xs text-slate-500">
+                  <span>{post.date}</span>
+                  <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2 py-1 font-semibold text-blue-600">
+                    Blog
+                  </span>
+                </div>
+                <h3 className="text-base font-semibold text-slate-900">{post.title}</h3>
+                <p className="text-sm text-slate-600">{post.excerpt}</p>
+                <a
+                  href={post.link}
+                  className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-blue-600 transition group-hover:gap-3"
+                >
+                  Read more
+                  <span aria-hidden>→</span>
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" className="mx-auto max-w-6xl px-4 pb-14 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center rounded-[28px] border border-slate-200 bg-white/70 p-8 shadow-lg card-shadow">
+          <p className="text-sm font-semibold text-blue-600">Experience</p>
+          <SectionTitle>Professional Experience & Projects</SectionTitle>
+          <p className="text-sm text-slate-600">
+            A blend of academic work and personal projects showcasing my drive to build reliable systems.
+          </p>
+
+          <div className="mt-8 grid w-full gap-6 md:grid-cols-[1fr_auto_1fr] md:items-start">
+            <div className="space-y-6">
+              <ExperienceCard {...experiences[0]} />
+            </div>
+            <div className="mx-auto hidden h-full md:block">
+              <div className="dashed-line h-full rounded-full bg-slate-200" />
+            </div>
+            <div className="space-y-6">
+              <ExperienceCard {...experiences[1]} align="right" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" className="mx-auto max-w-6xl px-4 pb-14 sm:px-6 lg:px-8">
+        <div className="rounded-[28px] border border-slate-200 bg-white/70 p-8 shadow-lg card-shadow">
+          <p className="text-sm font-semibold text-blue-600">Skills</p>
+          <SectionTitle>Technical Skills</SectionTitle>
+          <p className="text-sm text-slate-600">
+            A curated selection of my expertise in DevOps and cloud computing.
+          </p>
+
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {skills.map((skill) => (
+              <span
+                key={skill}
+                className="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-200 hover:text-blue-700"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+
+          <div className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-blue-50 px-4 py-3 text-sm font-semibold text-blue-600">
+            <span>Last updated Jan 2025</span>
             <a
-              href="https://www.linkedin.com/in/teemurekiranta"
-              className="hover:text-sky-400"
+              href="mailto:Teemu.Rekiranta1@gmail.com"
+              className="inline-flex items-center gap-2 text-blue-700 underline decoration-2 underline-offset-4"
             >
-              LinkedIn
+              Open to feedback and collaboration
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume" className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center rounded-[28px] border border-slate-200 bg-white/80 p-8 text-center shadow-lg card-shadow">
+          <p className="text-sm font-semibold text-blue-600">Résumé</p>
+          <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">My Resume</h2>
+          <p className="mt-2 max-w-2xl text-sm text-slate-600">
+            View my education, qualifications, and recent experience as a Cloud & DevOps engineer.
+          </p>
+          <div className="mt-6 w-full rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 via-white to-slate-100 p-6 text-left shadow-inner">
+            <div className="flex flex-wrap items-center justify-between gap-3 text-sm text-slate-600">
+              <div className="font-semibold text-slate-800">Teemu Rekiranta</div>
+              <div className="flex items-center gap-2 text-xs text-slate-500">
+                <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2 py-1 font-semibold text-blue-600">
+                  Verified
+                </span>
+                <span>Last updated Jan 2025</span>
+              </div>
+            </div>
+            <div className="mt-4 grid gap-3 text-xs text-slate-600 sm:grid-cols-3">
+              <div>
+                <div className="text-[11px] font-semibold uppercase tracking-wide text-slate-500">Experience</div>
+                <p className="font-medium text-slate-800">1 – 2 years</p>
+              </div>
+              <div>
+                <div className="text-[11px] font-semibold uppercase tracking-wide text-slate-500">Technical Skills</div>
+                <p className="font-medium text-slate-800">20+</p>
+              </div>
+              <div>
+                <div className="text-[11px] font-semibold uppercase tracking-wide text-slate-500">Location</div>
+                <p className="font-medium text-slate-800">Helsinki, Finland</p>
+              </div>
+            </div>
+            <div className="mt-5 h-[260px] rounded-xl border border-dashed border-slate-200 bg-white/60 p-4 text-sm text-slate-600">
+              <p className="font-semibold text-slate-800">Preview</p>
+              <p className="mt-2 text-sm">
+                Detailed snapshot of my recent work, tools I use, and education milestones. Download for the full view.
+              </p>
+            </div>
+          </div>
+          <div className="mt-6 flex flex-wrap justify-center gap-3 text-sm font-semibold">
+            <a
+              href="/Teemu-Rekiranta-Resume.pdf"
+              className="button-glow inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 px-6 py-3 text-white shadow-lg transition hover:brightness-105"
+            >
+              Download CV
             </a>
             <a
               href="mailto:Teemu.Rekiranta1@gmail.com"
-              className="hover:text-sky-400"
+              className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-6 py-3 text-blue-700 shadow-sm transition hover:-translate-y-0.5"
             >
-              Email
+              Send Message
             </a>
           </div>
-
-          <div className="mt-6 flex flex-wrap justify-center gap-4">
-            <HeroButton href="#contact" kind="primary">
-              Lets connect
-            </HeroButton>
-            <HeroButton href="#projects" kind="outline">
-              View projects
-            </HeroButton>
-          </div>
-        </div>
-      </section>
-
-      {/* About Me */}
-      <section
-        id="about"
-        className="border-b border-slate-800 bg-slate-950"
-      >
-        <div className="mx-auto max-w-4xl px-6 py-10">
-          <h2 className="text-xl font-semibold sm:text-2xl">
-            📘 About Me
-          </h2>
-          <p className="mt-4 text-sm text-slate-300 sm:text-base">
-            I am a <strong>Junior Cloud and DevOps Engineer</strong> and{" "}
-            <strong>IT Infrastructure student</strong> from Helsinki, Finland.
-            I am transitioning into IT after more than eight years in demanding
-            and fast paced environments where I learned process optimization,
-            quality control and teamwork.
-          </p>
-          <p className="mt-3 text-sm text-slate-300 sm:text-base">
-            My focus is on <strong>cloud platforms</strong>,{" "}
-            <strong>DevOps practices</strong> and{" "}
-            <strong>virtualized infrastructure</strong>. I enjoy learning by
-            building real projects and turning theoretical concepts into
-            practical solutions.
-          </p>
-
-          <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-300 sm:text-base">
-            <li>
-              🌱 Currently studying cloud services, virtualization and ICT
-              infrastructure
-            </li>
-            <li>
-              ☁️ Exploring AWS, Google Cloud and cloud native patterns
-            </li>
-            <li>
-              ⚙️ Practicing DevOps, CI and CD, containers and automation
-            </li>
-            <li>
-              🧠 Strong interest in infrastructure, APIs and data pipelines
-            </li>
-            <li>
-              ⚡ Motto: <em>Learning fast, building faster.</em>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Tech Stack */}
-      <section
-        id="skills"
-        className="border-b border-slate-800 bg-slate-950"
-      >
-        <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
-          <h2 className="text-xl font-semibold sm:text-2xl">🛠️ Tech Stack</h2>
-
-          <div className="mt-6 overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/40 p-4">
-            <table className="min-w-full border-collapse text-[11px] text-slate-100 sm:text-xs">
-              <thead>
-                <tr className="border-b border-slate-800 bg-slate-900/60">
-                  <Th>Cloud Platforms</Th>
-                  <Th>CI/CD and Automation</Th>
-                  <Th>Containers and OS</Th>
-                  <Th>Databases and Analytics</Th>
-                  <Th>Languages and Tools</Th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-slate-800">
-                  <Td>
-                    <Badge src="https://img.shields.io/badge/AWS-232F3E.svg?style=for-the-badge&logo=amazonwebservices&logoColor=white" />
-                  </Td>
-                  <Td>
-                    <Badge src="https://img.shields.io/badge/GitHub%20Actions-2088FF.svg?style=for-the-badge&logo=githubactions&logoColor=white" />
-                  </Td>
-                  <Td>
-                    <Badge src="https://img.shields.io/badge/Docker-2496ED.svg?style=for-the-badge&logo=docker&logoColor=white" />
-                  </Td>
-                  <Td>
-                    <Badge src="https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" />
-                  </Td>
-                  <Td>
-                    <Badge src="https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=python&logoColor=white" />
-                  </Td>
-                </tr>
-                <tr className="border-b border-slate-800">
-                  <Td>
-                    <Badge src="https://img.shields.io/badge/Google%20Cloud-4285F4.svg?style=for-the-badge&logo=googlecloud&logoColor=white" />
-                  </Td>
-                  <Td>
-                    <Badge src="https://img.shields.io/badge/Terraform-844FBA.svg?style=for-the-badge&logo=terraform&logoColor=white" />
-                  </Td>
-                  <Td>
-                    <Badge src="https://img.shields.io/badge/Kubernetes-326CE5.svg?style=for-the-badge&logo=kubernetes&logoColor=white" />
-                  </Td>
-                  <Td>
-                    <Badge src="https://img.shields.io/badge/SQL-336791.svg?style=for-the-badge&logo=postgresql&logoColor=white" />
-                  </Td>
-                  <Td>
-                    <Badge src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" />
-                  </Td>
-                </tr>
-                <tr className="border-b border-slate-800">
-                  <Td />
-                  <Td>
-                    <Badge src="https://img.shields.io/badge/CI%2FCD-000000.svg?style=for-the-badge&logo=github&logoColor=white" />
-                  </Td>
-                  <Td>
-                    <Badge src="https://img.shields.io/badge/Linux-FCC624.svg?style=for-the-badge&logo=linux&logoColor=black" />
-                  </Td>
-                  <Td>
-                    <Badge src="https://img.shields.io/badge/Power%20BI-F2C811.svg?style=for-the-badge&logo=powerbi&logoColor=black" />
-                  </Td>
-                  <Td>
-                    <Badge src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=typescript&logoColor=white" />
-                  </Td>
-                </tr>
-                <tr className="border-b border-slate-800">
-                  <Td />
-                  <Td>
-                    <Badge src="https://img.shields.io/badge/Git-F05032.svg?style=for-the-badge&logo=git&logoColor=white" />
-                  </Td>
-                  <Td>
-                    <Badge src="https://img.shields.io/badge/Windows%20Server-0078D6.svg?style=for-the-badge&logo=windows&logoColor=white" />
-                  </Td>
-                  <Td />
-                  <Td>
-                    <Badge src="https://img.shields.io/badge/Node.js-339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white" />
-                  </Td>
-                </tr>
-                <tr>
-                  <Td />
-                  <Td />
-                  <Td />
-                  <Td />
-                  <Td>
-                    <Badge src="https://img.shields.io/badge/Bash-4EAA25.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" />
-                  </Td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* Certifications */}
-      <section
-        id="certifications"
-        className="border-b border-slate-800 bg-slate-950"
-      >
-        <div className="mx-auto max-w-4xl px-6 py-10">
-          <h2 className="text-xl font-semibold sm:text-2xl">
-            🎓 Certifications
-          </h2>
-          <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-300 sm:text-base">
-            <li>AWS Academy Cloud Foundations</li>
-            <li>AWS Academy Cloud Architecting</li>
-            <li>Google Cloud Computing Foundations</li>
-            <li>SAS Data Literacy Essentials</li>
-            <li>Google Fundamentals of Digital Marketing</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Selected Projects */}
-      <section
-        id="projects"
-        className="border-b border-slate-800 bg-slate-950"
-      >
-        <div className="mx-auto max-w-4xl px-6 py-10">
-          <h2 className="text-xl font-semibold sm:text-2xl">
-            📦 Selected Projects
-          </h2>
-
-          <div className="mt-6 space-y-6">
-            <ProjectBlock
-              title="BuildWatch CI Monitor"
-              description="Dashboard that shows the status of CI pipelines and builds, focused on visibility and quick feedback for developers."
-              keywords="DevOps, CI monitoring, automation"
-              repo="buildwatch-ci-monitor"
-            />
-            <ProjectBlock
-              title="Data Pipeline ELT with dbt"
-              description="End to end ELT data pipeline that models, transforms and tests data sets using dbt style workflows."
-              keywords="ELT, dbt, data engineering"
-              repo="data-pipeline-elt-dbt"
-            />
-            <ProjectBlock
-              title="Local Serverless ETL"
-              description="Concept project that simulates a serverless style ETL path with event based steps and modular tasks."
-              keywords="serverless patterns, ETL, automation"
-              repo="local-serverless-etl"
-            />
-            <ProjectBlock
-              title="FastAPI Redis Cache API"
-              description="High speed REST API with caching and clean structure. A small but focused backend service."
-              keywords="Python, FastAPI, Redis, API design"
-              repo="fastapi-redis-cache-api"
-            />
-            <ProjectBlock
-              title="DevOps CI Demo"
-              description="Simple continuous integration setup that connects GitHub changes with automated checks and builds."
-              keywords="DevOps, CI, GitHub Actions"
-              repo="devops-ci-demo"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Connect With Me */}
-      <section
-        id="contact"
-        className="bg-slate-950"
-      >
-        <div className="mx-auto max-w-4xl px-6 py-10">
-          <h2 className="text-xl font-semibold sm:text-2xl">
-            🌐 Connect With Me
-          </h2>
-          <p className="mt-3 max-w-2xl text-sm text-slate-300 sm:text-base">
-            I am open to junior cloud and DevOps roles, internships and
-            collaborative learning projects. If my profile and projects look
-            interesting, feel free to reach out.
-          </p>
-
-          <div className="mt-6 flex flex-wrap gap-4">
-            <ContactBadge href="https://www.linkedin.com/in/teemurekiranta">
-              LinkedIn
-            </ContactBadge>
-            <ContactBadge href="mailto:Teemu.Rekiranta1@gmail.com">
-              Email
-            </ContactBadge>
-            <ContactBadge href="https://github.com/Rekiranta">
-              GitHub
-            </ContactBadge>
-          </div>
-
-          <p className="mt-10 text-sm font-medium text-slate-400">
-            💡 Learning fast, building faster.
-          </p>
         </div>
       </section>
     </main>
   );
 }
 
-/* helper components */
-
-type HeroButtonProps = {
-  href: string;
-  kind: "primary" | "outline";
-  children: React.ReactNode;
-};
-
-function HeroButton({ href, kind, children }: HeroButtonProps) {
-  const base =
-    "inline-flex items-center justify-center rounded-full px-5 py-2 text-sm font-semibold transition";
-  const styles =
-    kind === "primary"
-      ? "bg-sky-500 text-white hover:bg-sky-400"
-      : "border border-slate-600 text-slate-100 hover:border-sky-400";
+function NavBar() {
   return (
-    <a href={href} className={`${base} ${styles}`}>
-      {children}
-    </a>
+    <header className="sticky top-0 z-20 w-full border-b border-slate-200/60 bg-white/80 backdrop-blur">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <div className="flex items-center gap-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 text-lg font-bold text-white shadow-md">
+            T
+          </div>
+          <div className="leading-tight">
+            <p className="text-sm font-semibold text-slate-900">Teemu Rekiranta</p>
+            <p className="text-xs text-slate-500">Cloud & DevOps Engineer</p>
+          </div>
+        </div>
+        <nav className="hidden items-center gap-5 text-sm font-semibold text-slate-700 sm:flex">
+          <a href="#about" className="transition hover:text-blue-600">
+            About
+          </a>
+          <a href="#skills" className="transition hover:text-blue-600">
+            Skills
+          </a>
+          <a href="#experience" className="transition hover:text-blue-600">
+            Experience
+          </a>
+          <a href="#projects" className="transition hover:text-blue-600">
+            Projects
+          </a>
+          <a href="#blogs" className="transition hover:text-blue-600">
+            Blogs
+          </a>
+        </nav>
+        <div className="flex items-center gap-2">
+          <a
+            href="https://github.com/Rekiranta"
+            className="hidden rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-blue-700 shadow-sm transition hover:-translate-y-0.5 sm:inline-flex"
+          >
+            Contact
+          </a>
+          <button
+            type="button"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-sm transition hover:-translate-y-0.5 hover:text-blue-600"
+            aria-label="Toggle theme"
+          >
+            ☀️
+          </button>
+        </div>
+      </div>
+    </header>
   );
 }
 
-type ThProps = { children: React.ReactNode };
-
-function Th({ children }: ThProps) {
+function Hero() {
   return (
-    <th className="px-2 py-2 text-left text-[0.65rem] font-semibold uppercase tracking-wide text-slate-400 sm:px-3 sm:text-xs">
-      {children}
-    </th>
+    <div className="relative overflow-hidden rounded-[32px] border border-slate-200 bg-white/80 px-6 py-12 text-center shadow-2xl card-shadow sm:px-10">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.12),transparent_35%),radial-gradient(circle_at_80%_40%,rgba(56,189,248,0.14),transparent_35%),radial-gradient(circle_at_50%_80%,rgba(14,165,233,0.1),transparent_38%)]" />
+      <div className="absolute left-8 top-8 hidden h-12 w-12 rounded-2xl border border-blue-100 bg-blue-50/70 md:block" />
+      <div className="absolute -right-6 bottom-8 hidden h-24 w-24 rotate-12 rounded-3xl border border-blue-100 bg-sky-50/70 md:block" />
+
+      <p className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50/80 px-4 py-2 text-xs font-semibold text-blue-700 shadow-sm">
+        Cloud & DevOps Engineer
+      </p>
+      <h1 className="mt-4 text-4xl font-extrabold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
+        Teemu <span className="text-blue-600">Rekiranta</span>
+      </h1>
+      <p className="mt-4 text-lg text-slate-600 sm:text-xl">
+        Building scalable, observable infrastructure aligned with business needs.
+      </p>
+      <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm text-slate-600">
+        <span>📍 Helsinki, Finland</span>
+        <span>•</span>
+        <span>Open to work</span>
+        <span>•</span>
+        <span>Available for remote roles</span>
+      </div>
+      <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm font-semibold">
+        <a
+          className="button-glow inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 px-6 py-3 text-white shadow-lg transition hover:brightness-105"
+          href="mailto:Teemu.Rekiranta1@gmail.com"
+        >
+          Let&apos;s Connect
+        </a>
+        <a
+          className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-6 py-3 text-blue-700 shadow-sm transition hover:-translate-y-0.5"
+          href="#projects"
+        >
+          View Projects
+        </a>
+        <a
+          className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-6 py-3 text-blue-700 shadow-sm transition hover:-translate-y-0.5"
+          href="#resume"
+        >
+          My Resume
+        </a>
+      </div>
+      <div className="mt-10 flex flex-wrap justify-center gap-3 text-sm font-medium text-slate-600">
+        {socials.map((social) => (
+          <a
+            key={social.label}
+            className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 shadow-sm transition hover:-translate-y-0.5 hover:text-blue-600"
+            href={social.href}
+          >
+            {social.label}
+          </a>
+        ))}
+      </div>
+      <div className="mt-12 flex items-center justify-center gap-2 text-sm font-semibold text-blue-600">
+        <span className="rounded-full bg-blue-50 px-4 py-2">Scroll to explore</span>
+        <span aria-hidden className="animate-bounce text-lg">
+          ↓
+        </span>
+      </div>
+    </div>
   );
 }
 
-type TdProps = { children?: React.ReactNode };
-
-function Td({ children }: TdProps) {
-  return (
-    <td className="px-2 py-3 align-top sm:px-3">
-      {children ?? <span className="text-slate-600">{" "}</span>}
-    </td>
-  );
-}
-
-type BadgeProps = { src: string };
-
-function Badge({ src }: BadgeProps) {
-  return (
-    <img
-      src={src}
-      alt=""
-      className="mb-1 max-h-7 rounded-md bg-slate-900/80"
-    />
-  );
-}
-
-type ProjectBlockProps = {
-  title: string;
-  description: string;
-  keywords: string;
-  repo: string;
-};
-
-function ProjectBlock({
+function SectionHeading({
   title,
   description,
-  keywords,
-  repo,
-}: ProjectBlockProps) {
+}: {
+  title: string;
+  description: string;
+}) {
   return (
-    <article className="rounded-2xl border border-slate-800 bg-slate-900/50 p-5">
-      <h3 className="text-base font-semibold text-slate-50">{title}</h3>
-      <p className="mt-2 text-sm text-slate-300">{description}</p>
-      <p className="mt-2 text-xs text-slate-400">
-        <span className="font-semibold">Keywords:</span> {keywords}
-      </p>
-      <a
-        href={`https://github.com/Rekiranta/${repo}`}
-        className="mt-3 inline-flex rounded-full border border-slate-600 px-3 py-1 text-xs font-medium text-sky-300 hover:border-sky-400 hover:text-sky-200"
-      >
-        View repository
-      </a>
+    <div className="flex flex-col gap-2 text-center sm:text-left">
+      <p className="text-sm font-semibold text-blue-600">Projects</p>
+      <h2 className="text-3xl font-bold text-slate-900">{title}</h2>
+      <p className="text-sm text-slate-600">{description}</p>
+    </div>
+  );
+}
+
+function SectionTitle({ children }: { children: React.ReactNode }) {
+  return <h2 className="text-3xl font-bold text-slate-900">{children}</h2>;
+}
+
+function ProjectCard({
+  project,
+}: {
+  project: (typeof projects)[number];
+}) {
+  return (
+    <article className="group overflow-hidden rounded-[24px] border border-slate-200 bg-white/80 shadow-lg transition hover:-translate-y-1 hover:shadow-2xl">
+      <div className="relative h-44 w-full overflow-hidden bg-slate-100">
+        <Image
+          src={project.image}
+          alt=""
+          fill
+          sizes="(min-width: 1024px) 480px, (min-width: 768px) 50vw, 100vw"
+          className="object-cover transition duration-700 group-hover:scale-105"
+          priority={false}
+        />
+      </div>
+      <div className="flex flex-col gap-3 px-5 py-4">
+        <div className="flex flex-wrap gap-2">
+          <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-600">
+            DevOps
+          </span>
+          <span className="rounded-full bg-cyan-50 px-3 py-1 text-xs font-semibold text-cyan-600">
+            Cloud Computing
+          </span>
+        </div>
+        <h3 className="text-lg font-semibold text-slate-900">{project.title}</h3>
+        <p className="text-sm text-slate-600">{project.description}</p>
+        <div className="flex flex-wrap gap-2 text-xs font-semibold text-blue-600">
+          {project.tags.map((tag) => (
+            <span key={tag} className="rounded-full bg-blue-50 px-3 py-1">
+              {tag}
+            </span>
+          ))}
+        </div>
+        <a
+          href={project.link}
+          className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-blue-600 transition hover:gap-3"
+        >
+          View project <span aria-hidden>→</span>
+        </a>
+      </div>
     </article>
   );
 }
 
-type ContactBadgeProps = {
-  href: string;
-  children: React.ReactNode;
-};
-
-function ContactBadge({ href, children }: ContactBadgeProps) {
+function ExperienceCard({
+  title,
+  subtitle,
+  period,
+  points,
+  align = "left",
+}: {
+  title: string;
+  subtitle: string;
+  period: string;
+  points: string[];
+  align?: "left" | "right";
+}) {
+  const alignment = align === "right" ? "items-end text-right" : "items-start text-left";
   return (
-    <a
-      href={href}
-      className="rounded-full border border-slate-600 px-4 py-2 text-xs font-semibold text-slate-100 hover:border-sky-400 hover:text-sky-200"
-    >
-      {children}
-    </a>
+    <div className={`flex flex-col gap-2 rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-md ${alignment}`}>
+      <div className="flex w-full items-center justify-between text-xs font-semibold text-blue-600">
+        <span>{period}</span>
+        <span>Present</span>
+      </div>
+      <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
+      <p className="text-sm text-slate-600">{subtitle}</p>
+      <ul className="mt-2 space-y-2 text-sm text-slate-700">
+        {points.map((point) => (
+          <li key={point} className="flex items-start gap-2">
+            <span className="mt-1 inline-block h-2 w-2 rounded-full bg-blue-500" />
+            <span>{point}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

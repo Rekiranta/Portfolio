@@ -3,19 +3,15 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Teemu Rekiranta | Junior Cloud and DevOps Engineer",
+  title: "Teemu Rekiranta | Cloud & DevOps Engineer",
   description:
-    "Portfolio of Teemu Rekiranta, Junior Cloud and DevOps Engineer and IT Infrastructure student based in Helsinki."
+    "Portfolio of Teemu Rekiranta, highlighting cloud, DevOps, and infrastructure projects with a modern showcase layout.",
 };
 
-export default function RootLayout(
-  { children }: { children: ReactNode }
-) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-slate-950 text-slate-50 antialiased">
-        {children}
-      </body>
+      <body className="bg-slate-50 text-slate-900 antialiased">{children}</body>
     </html>
   );
 }
