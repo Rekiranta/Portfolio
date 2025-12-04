@@ -39,7 +39,7 @@ export default function Home() {
         className="border-b border-slate-800 bg-slate-950/80"
       >
         <div className="mx-auto flex max-w-4xl flex-col gap-6 px-6 py-12">
-          <h2 className="text-2xl font-semibold md:text-3xl">About Me</h2>
+          <h2 className="text-2xl font-semibold md:text-3xl">📘 About Me</h2>
           <p className="text-sm text-slate-300 md:text-base">
             I am a <strong>Junior Cloud and DevOps Engineer</strong> and{" "}
             <strong>IT Infrastructure student</strong> from Helsinki, Finland.
@@ -84,7 +84,7 @@ export default function Home() {
         className="border-b border-slate-800 bg-slate-900/40"
       >
         <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
-          <h2 className="text-2xl font-semibold md:text-3xl">Tech Stack</h2>
+          <h2 className="text-2xl font-semibold md:text-3xl">🛠️ Tech Stack</h2>
           <div className="mt-6 overflow-x-auto rounded-2xl border border-slate-800 bg-slate-950/60 p-4">
             <table className="min-w-full border-collapse text-xs text-slate-200 sm:text-sm">
               <thead>
@@ -93,7 +93,7 @@ export default function Home() {
                   <Th>CI/CD and Automation</Th>
                   <Th>Containers and OS</Th>
                   <Th>Databases and Analytics</Th>
-                  <Th>Languages and Web</Th>
+                  <Th>Languages and Tools</Th>
                 </tr>
               </thead>
               <tbody>
@@ -156,10 +156,16 @@ export default function Home() {
                   </Td>
                   <Td />
                   <Td>
-                    <div className="flex flex-wrap gap-2">
-                      <Badge src="https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" />
-                      <Badge src="https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=css3&logoColor=white" />
-                    </div>
+                    <Badge src="https://img.shields.io/badge/Node.js-339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+                  </Td>
+                </tr>
+                <tr>
+                  <Td />
+                  <Td />
+                  <Td />
+                  <Td />
+                  <Td>
+                    <Badge src="https://img.shields.io/badge/Bash-4EAA25.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" />
                   </Td>
                 </tr>
               </tbody>
@@ -174,7 +180,7 @@ export default function Home() {
         className="border-b border-slate-800 bg-slate-950/80"
       >
         <div className="mx-auto max-w-4xl px-6 py-12">
-          <h2 className="text-2xl font-semibold md:text-3xl">Certifications</h2>
+          <h2 className="text-2xl font-semibold md:text-3xl">🎓 Certifications</h2>
           <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-300 md:text-base">
             <li>🎖️ AWS Academy Cloud Foundations</li>
             <li>🎖️ AWS Academy Cloud Architecting</li>
@@ -188,7 +194,7 @@ export default function Home() {
       {/* Selected Projects */}
       <section id="projects" className="border-b border-slate-800 bg-slate-900/40">
         <div className="mx-auto max-w-4xl px-6 py-12">
-          <h2 className="text-2xl font-semibold md:text-3xl">Selected Projects</h2>
+          <h2 className="text-2xl font-semibold md:text-3xl">📦 Selected Projects</h2>
 
           <div className="mt-6 space-y-8">
             <ProjectBlock
@@ -228,7 +234,7 @@ export default function Home() {
       {/* Connect */}
       <section id="contact" className="bg-slate-950">
         <div className="mx-auto max-w-4xl px-6 py-12">
-          <h2 className="text-2xl font-semibold md:text-3xl">Connect With Me</h2>
+          <h2 className="text-2xl font-semibold md:text-3xl">🌐 Connect With Me</h2>
           <p className="mt-3 text-sm text-slate-300 md:text-base">
             I am open to junior cloud and DevOps roles, internships and
             collaborative learning projects. If my profile and projects look
