@@ -4,41 +4,18 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-50">
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 px-6 py-20 text-center">
-          <p className="text-sm uppercase tracking-[0.35em] text-sky-400">
-            Teemu Rekiranta
-          </p>
-          <h1 className="text-balance text-4xl font-bold sm:text-5xl md:text-6xl">
-            Junior Cloud and DevOps Engineer
-            <br />
-            <span className="text-sky-400 text-2xl sm:text-3xl">
-              IT Infrastructure Student
-            </span>
+      <section className="border-b border-slate-800">
+        <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-6 py-16 text-center">
+          <h1 className="text-3xl font-bold sm:text-4xl">
+            Hi 👋, I am Teemu Rekiranta
           </h1>
-          <p className="max-w-2xl text-balance text-base text-slate-300 sm:text-lg">
-            I build cloud ready solutions, automate infrastructure and learn
-            DevOps by creating real projects. Focused on AWS, Google Cloud,
-            CI and CD, virtualization and modern backend technologies.
+          <p className="text-sm uppercase tracking-[0.35em] text-sky-400">
+            Junior Cloud and DevOps Engineer · IT Infrastructure Student
           </p>
-          <p className="rounded-full border border-sky-500 px-4 py-1 text-sm font-medium text-sky-300">
-            Learning fast, building faster
+          <p className="max-w-2xl text-sm text-slate-300 sm:text-base">
+            Cloud and Infrastructure · Learning fast, building faster
           </p>
-          <div className="mt-4 flex flex-wrap justify-center gap-4">
-            <a
-              href="#projects"
-              className="rounded-2xl px-6 py-3 text-sm font-semibold bg-sky-500 hover:bg-sky-400 transition"
-            >
-              View Projects
-            </a>
-            <a
-              href="#contact"
-              className="rounded-2xl px-6 py-3 text-sm font-semibold border border-slate-600 hover:border-sky-400 transition"
-            >
-              Contact Me
-            </a>
-          </div>
-          <div className="mt-6 flex flex-wrap justify-center gap-6 text-sm text-slate-400">
+          <div className="mt-2 flex flex-wrap justify-center gap-4 text-sm text-slate-400">
             <span>📍 Helsinki, Finland</span>
             <a
               href="https://www.linkedin.com/in/teemurekiranta"
@@ -56,201 +33,309 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About */}
-      <section id="about" className="border-t border-slate-800 bg-slate-950">
-        <div className="mx-auto flex max-w-5xl flex-col gap-8 px-6 py-16 md:flex-row">
-          <div className="md:w-1/2">
-            <h2 className="text-2xl font-semibold md:text-3xl">About Me</h2>
-            <p className="mt-4 text-sm text-slate-300 md:text-base">
-              I am an IT Infrastructure student and aspiring Cloud and DevOps
-              Engineer from Helsinki. My background in demanding restaurant
-              environments taught me process thinking, quality focus and calm
-              decision making under pressure. I now apply these strengths to
-              cloud services, infrastructure work and automation.
-            </p>
-            <p className="mt-3 text-sm text-slate-300 md:text-base">
-              I like to learn by building. My projects explore cloud platforms,
-              CI and CD, data pipelines and backend APIs. I enjoy turning
-              complex ideas into clear and reliable systems that others can
-              understand and extend.
-            </p>
-          </div>
-          <div className="md:w-1/2">
-            <h3 className="text-lg font-semibold">Current Focus</h3>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300 md:text-base">
-              <li>Cloud platforms AWS and Google Cloud</li>
-              <li>DevOps culture and automation of build and release flows</li>
-              <li>Virtualization and infrastructure for Linux and Windows</li>
-              <li>Backend services with Python, Node.js and APIs</li>
-              <li>Monitoring, quality and reliability of systems</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills */}
+      {/* About Me */}
       <section
-        id="skills"
-        className="border-t border-slate-800 bg-slate-900/40"
+        id="about"
+        className="border-b border-slate-800 bg-slate-950/80"
       >
-        <div className="mx-auto max-w-5xl px-6 py-16">
-          <h2 className="text-2xl font-semibold md:text-3xl">Skills</h2>
+        <div className="mx-auto flex max-w-4xl flex-col gap-6 px-6 py-12">
+          <h2 className="text-2xl font-semibold md:text-3xl">About Me</h2>
+          <p className="text-sm text-slate-300 md:text-base">
+            I am a <strong>Junior Cloud and DevOps Engineer</strong> and{" "}
+            <strong>IT Infrastructure student</strong> from Helsinki, Finland.
+            I am transitioning into IT after more than eight years in demanding
+            and fast paced environments where I learned process optimization,
+            quality control and teamwork.
+          </p>
+          <p className="text-sm text-slate-300 md:text-base">
+            My focus is on <strong>cloud platforms</strong>,{" "}
+            <strong>DevOps practices</strong> and{" "}
+            <strong>virtualized infrastructure</strong>. I enjoy learning by
+            building real projects and turning theoretical concepts into
+            practical solutions.
+          </p>
+          <ul className="mt-2 list-disc space-y-2 pl-5 text-sm text-slate-300 md:text-base">
+            <li>
+              🌱 Currently studying <strong>cloud services, virtualization and
+              ICT infrastructure</strong>
+            </li>
+            <li>
+              ☁️ Exploring <strong>AWS</strong>, <strong>Google Cloud</strong>{" "}
+              and cloud native patterns
+            </li>
+            <li>
+              ⚙️ Practicing <strong>DevOps, CI and CD, containers and
+              automation</strong>
+            </li>
+            <li>
+              🧠 Strong interest in <strong>infrastructure, APIs and data
+              pipelines</strong>
+            </li>
+            <li>
+              ⚡ Motto: <em>Learning fast, building faster.</em>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <SkillCard
-              title="Cloud Platforms"
-              text="AWS and Google Cloud. Focus on core services, identity and access, networking basics and cost awareness."
-            />
-            <SkillCard
-              title="DevOps and Automation"
-              text="CI and CD concepts, Git and GitHub workflows, Docker and simple pipelines that keep code tested and deployable."
-            />
-            <SkillCard
-              title="Infrastructure and Virtualization"
-              text="VMware vSphere, Hyper V, Windows Server and Linux. Focus on stable and repeatable setups."
-            />
-            <SkillCard
-              title="Programming and Data"
-              text="Python, Node.js, SQL and MySQL plus Power BI for simple reporting. I use code to glue services together and automate tasks."
-            />
-            <SkillCard
-              title="Certifications"
-              text="AWS Academy Cloud Foundations and Cloud Architecting, Google Cloud Computing Foundations, SAS Data Literacy and Google Digital Marketing."
-            />
-            <SkillCard
-              title="Soft Skills"
-              text="Process thinking, quality ownership, teamwork and leadership experience from high pressure kitchen environments."
-            />
+      {/* Tech Stack */}
+      <section
+        id="tech-stack"
+        className="border-b border-slate-800 bg-slate-900/40"
+      >
+        <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
+          <h2 className="text-2xl font-semibold md:text-3xl">Tech Stack</h2>
+          <div className="mt-6 overflow-x-auto rounded-2xl border border-slate-800 bg-slate-950/60 p-4">
+            <table className="min-w-full border-collapse text-xs text-slate-200 sm:text-sm">
+              <thead>
+                <tr className="border-b border-slate-800">
+                  <Th>Cloud Platforms</Th>
+                  <Th>CI/CD and Automation</Th>
+                  <Th>Containers and OS</Th>
+                  <Th>Databases and Analytics</Th>
+                  <Th>Languages and Web</Th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-slate-800">
+                  <Td>
+                    <Badge src="https://img.shields.io/badge/AWS-232F3E.svg?style=for-the-badge&logo=amazonwebservices&logoColor=white" />
+                  </Td>
+                  <Td>
+                    <Badge src="https://img.shields.io/badge/GitHub%20Actions-2088FF.svg?style=for-the-badge&logo=githubactions&logoColor=white" />
+                  </Td>
+                  <Td>
+                    <Badge src="https://img.shields.io/badge/Docker-2496ED.svg?style=for-the-badge&logo=docker&logoColor=white" />
+                  </Td>
+                  <Td>
+                    <Badge src="https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" />
+                  </Td>
+                  <Td>
+                    <Badge src="https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=python&logoColor=white" />
+                  </Td>
+                </tr>
+                <tr className="border-b border-slate-800">
+                  <Td>
+                    <Badge src="https://img.shields.io/badge/Google%20Cloud-4285F4.svg?style=for-the-badge&logo=googlecloud&logoColor=white" />
+                  </Td>
+                  <Td>
+                    <Badge src="https://img.shields.io/badge/Terraform-844FBA.svg?style=for-the-badge&logo=terraform&logoColor=white" />
+                  </Td>
+                  <Td>
+                    <Badge src="https://img.shields.io/badge/Kubernetes-326CE5.svg?style=for-the-badge&logo=kubernetes&logoColor=white" />
+                  </Td>
+                  <Td>
+                    <Badge src="https://img.shields.io/badge/SQL-336791.svg?style=for-the-badge&logo=postgresql&logoColor=white" />
+                  </Td>
+                  <Td>
+                    <Badge src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" />
+                  </Td>
+                </tr>
+                <tr className="border-b border-slate-800">
+                  <Td />
+                  <Td>
+                    <Badge src="https://img.shields.io/badge/CI%2FCD-000000.svg?style=for-the-badge&logo=github&logoColor=white" />
+                  </Td>
+                  <Td>
+                    <Badge src="https://img.shields.io/badge/Linux-FCC624.svg?style=for-the-badge&logo=linux&logoColor=black" />
+                  </Td>
+                  <Td>
+                    <Badge src="https://img.shields.io/badge/Power%20BI-F2C811.svg?style=for-the-badge&logo=powerbi&logoColor=black" />
+                  </Td>
+                  <Td>
+                    <Badge src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=typescript&logoColor=white" />
+                  </Td>
+                </tr>
+                <tr className="border-b border-slate-800">
+                  <Td />
+                  <Td>
+                    <Badge src="https://img.shields.io/badge/Git-F05032.svg?style=for-the-badge&logo=git&logoColor=white" />
+                  </Td>
+                  <Td>
+                    <Badge src="https://img.shields.io/badge/Windows%20Server-0078D6.svg?style=for-the-badge&logo=windows&logoColor=white" />
+                  </Td>
+                  <Td />
+                  <Td>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge src="https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" />
+                      <Badge src="https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=css3&logoColor=white" />
+                    </div>
+                  </Td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
 
-      {/* Projects */}
-      <section id="projects" className="border-t border-slate-800 bg-slate-950">
-        <div className="mx-auto max-w-5xl px-6 py-16">
-          <h2 className="text-2xl font-semibold md:text-3xl">Projects</h2>
-          <p className="mt-3 max-w-2xl text-sm text-slate-300 md:text-base">
-            Here are some selected projects from my developer portfolio. They
-            show how I learn cloud, DevOps and backend skills in practice.
-          </p>
+      {/* Certifications */}
+      <section
+        id="certifications"
+        className="border-b border-slate-800 bg-slate-950/80"
+      >
+        <div className="mx-auto max-w-4xl px-6 py-12">
+          <h2 className="text-2xl font-semibold md:text-3xl">Certifications</h2>
+          <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-300 md:text-base">
+            <li>🎖️ AWS Academy Cloud Foundations</li>
+            <li>🎖️ AWS Academy Cloud Architecting</li>
+            <li>🎖️ Google Cloud Computing Foundations</li>
+            <li>🎖️ SAS Data Literacy Essentials</li>
+            <li>🎖️ Google Fundamentals of Digital Marketing</li>
+          </ul>
+        </div>
+      </section>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            <ProjectCard
+      {/* Selected Projects */}
+      <section id="projects" className="border-b border-slate-800 bg-slate-900/40">
+        <div className="mx-auto max-w-4xl px-6 py-12">
+          <h2 className="text-2xl font-semibold md:text-3xl">Selected Projects</h2>
+
+          <div className="mt-6 space-y-8">
+            <ProjectBlock
               title="BuildWatch CI Monitor"
-              description="Dashboard that shows the status of CI pipelines and builds. Focus on visibility and quick feedback for developers."
-              tech="Node.js, CI concepts, monitoring"
+              description="Dashboard that shows the status of CI pipelines and builds, focused on visibility and quick feedback for developers."
+              keywords="DevOps, CI monitoring, automation"
               repo="buildwatch-ci-monitor"
             />
-            <ProjectCard
+            <ProjectBlock
               title="Data Pipeline ELT with dbt"
               description="End to end ELT data pipeline that models, transforms and tests data sets using dbt style workflows."
-              tech="dbt, SQL, data engineering"
+              keywords="ELT, dbt, data engineering"
               repo="data-pipeline-elt-dbt"
             />
-            <ProjectCard
+            <ProjectBlock
               title="Local Serverless ETL"
               description="Concept project that simulates a serverless style ETL path with event based steps and modular tasks."
-              tech="serverless patterns, ETL"
+              keywords="serverless patterns, ETL, automation"
               repo="local-serverless-etl"
             />
-            <ProjectCard
+            <ProjectBlock
               title="FastAPI Redis Cache API"
               description="High speed REST API with caching and clean structure. A small but focused backend service."
-              tech="Python, FastAPI, Redis"
+              keywords="Python, FastAPI, Redis, API design"
               repo="fastapi-redis-cache-api"
             />
-            <ProjectCard
+            <ProjectBlock
               title="DevOps CI Demo"
               description="Simple continuous integration setup that connects GitHub changes with automated checks and builds."
-              tech="DevOps, CI, GitHub Actions"
+              keywords="DevOps, CI, GitHub Actions"
               repo="devops-ci-demo"
             />
           </div>
         </div>
       </section>
 
-      {/* Contact */}
-      <section
-        id="contact"
-        className="border-t border-slate-800 bg-slate-900/40"
-      >
-        <div className="mx-auto max-w-5xl px-6 py-16">
-          <h2 className="text-2xl font-semibold md:text-3xl">Contact</h2>
-          <p className="mt-3 max-w-xl text-sm text-slate-300 md:text-base">
+      {/* Connect */}
+      <section id="contact" className="bg-slate-950">
+        <div className="mx-auto max-w-4xl px-6 py-12">
+          <h2 className="text-2xl font-semibold md:text-3xl">Connect With Me</h2>
+          <p className="mt-3 text-sm text-slate-300 md:text-base">
             I am open to junior cloud and DevOps roles, internships and
             collaborative learning projects. If my profile and projects look
-            interesting, feel free to send a message.
+            interesting, feel free to reach out.
           </p>
 
-          <div className="mt-6 space-y-2 text-sm text-slate-200 md:text-base">
-            <p>
-              📧 Email:{" "}
-              <a
-                href="mailto:Teemu.Rekiranta1@gmail.com"
-                className="text-sky-400 hover:underline"
-              >
-                Teemu.Rekiranta1@gmail.com
-              </a>
-            </p>
-            <p>
-              🔗 LinkedIn:{" "}
-              <a
-                href="https://www.linkedin.com/in/teemurekiranta"
-                className="text-sky-400 hover:underline"
-              >
-                linkedin.com/in/teemurekiranta
-              </a>
-            </p>
+          <div className="mt-6 flex flex-wrap gap-4">
+            <ContactBadge href="https://www.linkedin.com/in/teemurekiranta">
+              LinkedIn
+            </ContactBadge>
+            <ContactBadge href="mailto:Teemu.Rekiranta1@gmail.com">
+              Email
+            </ContactBadge>
+            <ContactBadge href="https://github.com/Rekiranta">
+              GitHub
+            </ContactBadge>
           </div>
 
-          <p className="mt-8 text-sm font-medium text-slate-400">
-            Learning fast, building faster
-          </p>
+          <div className="mt-10 text-center text-sm text-slate-400">
+            <p>💡 "Learning fast, building faster."</p>
+          </div>
         </div>
       </section>
     </main>
   );
 }
 
-type SkillCardProps = {
-  title: string;
-  text: string;
+type ThProps = {
+  children: React.ReactNode;
 };
 
-function SkillCard({ title, text }: SkillCardProps) {
+function Th({ children }: ThProps) {
   return (
-    <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
-      <h3 className="text-sm font-semibold uppercase tracking-wide text-sky-400">
-        {title}
-      </h3>
-      <p className="mt-3 text-sm text-slate-300">{text}</p>
-    </div>
+    <th className="px-2 py-2 text-left text-[0.7rem] font-semibold uppercase tracking-wide text-slate-400 sm:px-3 sm:text-xs">
+      {children}
+    </th>
   );
 }
 
-type ProjectCardProps = {
+type TdProps = {
+  children?: React.ReactNode;
+};
+
+function Td({ children }: TdProps) {
+  return (
+    <td className="px-2 py-3 align-top sm:px-3">
+      {children ?? <span className="text-slate-600">{" "}</span>}
+    </td>
+  );
+}
+
+type BadgeProps = {
+  src: string;
+};
+
+function Badge({ src }: BadgeProps) {
+  return (
+    <img
+      src={src}
+      alt=""
+      className="mb-1 max-h-8 rounded-md bg-slate-900/80"
+    />
+  );
+}
+
+type ProjectBlockProps = {
   title: string;
   description: string;
-  tech: string;
+  keywords: string;
   repo: string;
 };
 
-function ProjectCard({ title, description, tech, repo }: ProjectCardProps) {
+function ProjectBlock({
+  title,
+  description,
+  keywords,
+  repo,
+}: ProjectBlockProps) {
   return (
-    <article className="flex h-full flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
-      <div>
-        <h3 className="text-lg font-semibold text-slate-50">{title}</h3>
-        <p className="mt-2 text-sm text-slate-300">{description}</p>
-      </div>
-      <div className="mt-4 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-400">
-        <span>{tech}</span>
-        <a
-          href={`https://github.com/Rekiranta/${repo}`}
-          className="rounded-full border border-slate-700 px-3 py-1 text-xs font-medium text-sky-300 hover:border-sky-400 hover:text-sky-200"
-        >
-          View repository
-        </a>
-      </div>
+    <article className="rounded-2xl border border-slate-800 bg-slate-950/60 p-5">
+      <h3 className="text-lg font-semibold text-slate-50">{title}</h3>
+      <p className="mt-2 text-sm text-slate-300">{description}</p>
+      <p className="mt-2 text-xs text-slate-400">
+        <span className="font-semibold">Keywords:</span> {keywords}
+      </p>
+      <a
+        href={`https://github.com/Rekiranta/${repo}`}
+        className="mt-3 inline-flex rounded-full border border-slate-700 px-3 py-1 text-xs font-medium text-sky-300 hover:border-sky-400 hover:text-sky-200"
+      >
+        View repository
+      </a>
     </article>
+  );
+}
+
+type ContactBadgeProps = {
+  href: string;
+  children: React.ReactNode;
+};
+
+function ContactBadge({ href, children }: ContactBadgeProps) {
+  return (
+    <a
+      href={href}
+      className="rounded-full border border-slate-600 px-4 py-2 text-xs font-semibold text-slate-100 hover:border-sky-400 hover:text-sky-200"
+    >
+      {children}
+    </a>
   );
 }
