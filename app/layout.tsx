@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Teemu Rekiranta | Junior Cloud and DevOps Engineer",
   description:
-    "Portfolio of Teemu Rekiranta, Junior Cloud and DevOps Engineer and IT Infrastructure student based in Helsinki."
+    "Portfolio of Teemu Rekiranta, Junior Cloud and DevOps Engineer and IT Infrastructure student based in Helsinki.",
 };
 
 export default function RootLayout(
