@@ -6,7 +6,7 @@ type Project = {
   title: string;
   description: string;
   keywords: string;
-  repo: string;
+  url: string;
 };
 
 const projects: Project[] = [
@@ -15,37 +15,38 @@ const projects: Project[] = [
     description:
       "Dashboard that shows the status of CI pipelines and builds, focused on visibility and quick feedback for developers.",
     keywords: "DevOps, CI monitoring, automation",
-    repo: "buildwatch-ci-monitor",
+    url: "https://github.com/Rekiranta/My-dev-portfolio/tree/main/buildwatch-ci-monitor",
   },
   {
     title: "Data Pipeline ELT with dbt",
     description:
       "End to end ELT data pipeline that models, transforms and tests data sets using dbt style workflows.",
     keywords: "ELT, dbt, data engineering",
-    repo: "data-pipeline-elt-dbt",
+    url: "https://github.com/Rekiranta/My-dev-portfolio/tree/main/data-pipeline-elt-dbt",
   },
   {
     title: "Local Serverless ETL",
     description:
       "Concept project that simulates a serverless style ETL path with event based steps and modular tasks.",
     keywords: "serverless patterns, ETL, automation",
-    repo: "local-serverless-etl",
+    url: "https://github.com/Rekiranta/My-dev-portfolio/tree/main/local-serverless-etl",
   },
   {
     title: "FastAPI Redis Cache API",
     description:
       "High speed REST API with caching and clean structure. A small but focused backend service.",
     keywords: "Python, FastAPI, Redis, API design",
-    repo: "fastapi-redis-cache-api",
+    url: "https://github.com/Rekiranta/My-dev-portfolio/tree/main/fastapi-redis-cache-api",
   },
   {
     title: "DevOps CI Demo",
     description:
       "Simple continuous integration setup that connects GitHub changes with automated checks and builds.",
     keywords: "DevOps, CI, GitHub Actions",
-    repo: "devops-ci-demo",
+    url: "https://github.com/Rekiranta/My-dev-portfolio/tree/main/devops-ci-demo",
   },
 ];
+
 
 export default function Home() {
   return (
@@ -438,7 +439,9 @@ function ProjectCard({ project }: { project: Project }) {
       </div>
       <div className="mt-3">
         <a
-          href={`https://github.com/Rekiranta/${project.repo}`}
+          href={project.url}
+          target="_blank"
+          rel="noreferrer"
           className="inline-flex rounded-full border border-slate-600 px-3 py-1 text-xs font-medium text-sky-300 hover:border-sky-400 hover:text-sky-200"
         >
           View repository
@@ -447,6 +450,7 @@ function ProjectCard({ project }: { project: Project }) {
     </article>
   );
 }
+
 
 function ContactBadge({ href, children }: { href: string; children: React.ReactNode }) {
   return (
