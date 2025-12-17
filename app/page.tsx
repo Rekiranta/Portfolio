@@ -87,11 +87,11 @@ export default function Home() {
       <div className="noise-overlay" />
 
       {/* Header */}
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-[#f8fafc]/95 backdrop-blur-md border-b border-[#e2e8f0]" : ""}`}>
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-[#e0f2fe]/95 backdrop-blur-md border-b border-[#bae6fd]" : ""}`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
             <a href="#" className="font-display text-xl font-bold tracking-tight">
-              TR<span className="text-[#2563eb]">.</span>
+              TR<span className="text-[#1e40af]">.</span>
             </a>
 
             <nav className="hidden lg:flex items-center gap-10">
@@ -111,7 +111,7 @@ export default function Home() {
               </a>
             </div>
 
-            <button onClick={() => setMobileMenuOpen(true)} className="lg:hidden p-2 text-[#64748b] hover:text-[#0f172a] transition">
+            <button onClick={() => setMobileMenuOpen(true)} className="lg:hidden p-2 text-[#475569] hover:text-[#1e3a5f] transition">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
@@ -120,7 +120,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="bg-[#f8fafc] text-[#0f172a] min-h-screen">
+      <main className="bg-[#e0f2fe] text-[#1e3a5f] min-h-screen">
         {/* ================================================================
             HERO SECTION
             ================================================================ */}
@@ -137,9 +137,9 @@ export default function Home() {
               {/* Left Column - Text */}
               <div className="space-y-8">
                 <div className="animate-fade-up">
-                  <div className="inline-flex items-center gap-3 px-4 py-2 border border-[#e2e8f0] mb-8">
+                  <div className="inline-flex items-center gap-3 px-4 py-2 border border-[#bae6fd] mb-8">
                     <span className="w-2 h-2 rounded-full bg-[#4ade80] animate-pulse" />
-                    <span className="font-mono text-sm text-[#64748b]">Open to opportunities</span>
+                    <span className="font-mono text-sm text-[#475569]">Open to opportunities</span>
                   </div>
                 </div>
 
@@ -150,13 +150,13 @@ export default function Home() {
                 </h1>
 
                 <div className="animate-fade-up delay-200">
-                  <p className="font-display text-2xl lg:text-3xl font-semibold text-[#64748b]">
+                  <p className="font-display text-2xl lg:text-3xl font-semibold text-[#475569]">
                     Junior Cloud & DevOps Engineer
                   </p>
                 </div>
 
                 <div className="animate-fade-up delay-300">
-                  <p className="text-lg text-[#64748b] max-w-md leading-relaxed">
+                  <p className="text-lg text-[#475569] max-w-md leading-relaxed">
                     Building cloud-native solutions, automating infrastructure, and creating reliable data pipelines.
                     Based in Helsinki, Finland.
                   </p>
@@ -185,7 +185,7 @@ export default function Home() {
                     <div className="terminal-dot bg-[#ff5f57]" />
                     <div className="terminal-dot bg-[#febc2e]" />
                     <div className="terminal-dot bg-[#28c840]" />
-                    <span className="ml-4 text-xs text-[#64748b]">teemu@cloud ~ </span>
+                    <span className="ml-4 text-xs text-[#475569]">teemu@cloud ~ </span>
                   </div>
                   <div className="terminal-body">
                     <div className="space-y-4">
@@ -197,11 +197,11 @@ export default function Home() {
                       <div>
                         <span className="terminal-prompt">$ </span>
                         <span className="terminal-command">cat skills.json</span>
-                        <div className="terminal-output mt-1 text-[#64748b]">
+                        <div className="terminal-output mt-1 text-[#475569]">
                           {`{`}<br />
-                          &nbsp;&nbsp;<span className="text-[#2563eb]">&quot;cloud&quot;</span>: [<span className="text-[#4ade80]">&quot;AWS&quot;</span>, <span className="text-[#4ade80]">&quot;GCP&quot;</span>],<br />
-                          &nbsp;&nbsp;<span className="text-[#2563eb]">&quot;devops&quot;</span>: [<span className="text-[#4ade80]">&quot;CI/CD&quot;</span>, <span className="text-[#4ade80]">&quot;Terraform&quot;</span>],<br />
-                          &nbsp;&nbsp;<span className="text-[#2563eb]">&quot;containers&quot;</span>: [<span className="text-[#4ade80]">&quot;Docker&quot;</span>, <span className="text-[#4ade80]">&quot;K8s&quot;</span>]<br />
+                          &nbsp;&nbsp;<span className="text-[#1e40af]">&quot;cloud&quot;</span>: [<span className="text-[#4ade80]">&quot;AWS&quot;</span>, <span className="text-[#4ade80]">&quot;GCP&quot;</span>],<br />
+                          &nbsp;&nbsp;<span className="text-[#1e40af]">&quot;devops&quot;</span>: [<span className="text-[#4ade80]">&quot;CI/CD&quot;</span>, <span className="text-[#4ade80]">&quot;Terraform&quot;</span>],<br />
+                          &nbsp;&nbsp;<span className="text-[#1e40af]">&quot;containers&quot;</span>: [<span className="text-[#4ade80]">&quot;Docker&quot;</span>, <span className="text-[#4ade80]">&quot;K8s&quot;</span>]<br />
                           {`}`}
                         </div>
                       </div>
@@ -212,7 +212,7 @@ export default function Home() {
                       </div>
                       <div className="flex items-center">
                         <span className="terminal-prompt">$ </span>
-                        <span className="w-2 h-5 bg-[#2563eb] cursor-blink ml-1" />
+                        <span className="w-2 h-5 bg-[#1e40af] cursor-blink ml-1" />
                       </div>
                     </div>
                   </div>
@@ -223,9 +223,9 @@ export default function Home() {
 
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in delay-700">
-            <div className="flex flex-col items-center gap-2 text-[#64748b]">
+            <div className="flex flex-col items-center gap-2 text-[#475569]">
               <span className="font-mono text-xs uppercase tracking-widest">Scroll</span>
-              <div className="w-px h-12 bg-gradient-to-b from-[#2563eb] to-transparent" />
+              <div className="w-px h-12 bg-gradient-to-b from-[#1e40af] to-transparent" />
             </div>
           </div>
         </section>
@@ -233,7 +233,7 @@ export default function Home() {
         {/* ================================================================
             MARQUEE SECTION
             ================================================================ */}
-        <section className="py-8 border-y border-[#e2e8f0] overflow-hidden">
+        <section className="py-8 border-y border-[#bae6fd] overflow-hidden">
           <div className="marquee-container">
             <div className="marquee-track">
               {[...techStack, ...techStack].map((tech, i) => (
@@ -253,39 +253,39 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div>
-                <span className="font-mono text-sm text-[#2563eb] uppercase tracking-widest">About</span>
+                <span className="font-mono text-sm text-[#1e40af] uppercase tracking-widest">About</span>
                 <h2 className="font-display text-huge font-bold mt-4 tracking-tight">
                   From Process<br />
-                  <span className="text-stroke text-[#64748b]">to Pipeline</span>
+                  <span className="text-stroke text-[#475569]">to Pipeline</span>
                 </h2>
               </div>
 
               <div className="space-y-6">
-                <p className="text-editorial text-[#64748b] leading-relaxed">
-                  I&apos;m a <span className="text-[#0f172a] font-medium">Junior Cloud and DevOps Engineer</span> and
+                <p className="text-editorial text-[#475569] leading-relaxed">
+                  I&apos;m a <span className="text-[#1e3a5f] font-medium">Junior Cloud and DevOps Engineer</span> and
                   IT Infrastructure student based in Helsinki, Finland. After eight years in demanding environments
                   where I developed strong process optimization and quality control skills, I&apos;m now channeling
                   that experience into building cloud-native solutions.
                 </p>
-                <p className="text-editorial text-[#64748b] leading-relaxed">
-                  My focus areas include <span className="text-[#2563eb]">AWS</span>, <span className="text-[#2563eb]">Google Cloud</span>,
-                  <span className="text-[#2563eb]"> CI/CD pipelines</span>, and <span className="text-[#2563eb]">Infrastructure as Code</span>.
+                <p className="text-editorial text-[#475569] leading-relaxed">
+                  My focus areas include <span className="text-[#1e40af]">AWS</span>, <span className="text-[#1e40af]">Google Cloud</span>,
+                  <span className="text-[#1e40af]"> CI/CD pipelines</span>, and <span className="text-[#1e40af]">Infrastructure as Code</span>.
                   I believe in learning by building - every project in my portfolio represents hands-on exploration
                   of real-world patterns.
                 </p>
 
                 <div className="pt-8 grid sm:grid-cols-3 gap-8">
                   <div>
-                    <div className="font-display text-4xl font-bold text-[#2563eb]">23+</div>
-                    <div className="font-mono text-sm text-[#64748b] mt-1">Projects</div>
+                    <div className="font-display text-4xl font-bold text-[#1e40af]">23+</div>
+                    <div className="font-mono text-sm text-[#475569] mt-1">Projects</div>
                   </div>
                   <div>
                     <div className="font-display text-4xl font-bold text-[#06b6d4]">5</div>
-                    <div className="font-mono text-sm text-[#64748b] mt-1">Certifications</div>
+                    <div className="font-mono text-sm text-[#475569] mt-1">Certifications</div>
                   </div>
                   <div>
                     <div className="font-display text-4xl font-bold text-[#4ade80]">15+</div>
-                    <div className="font-mono text-sm text-[#64748b] mt-1">Technologies</div>
+                    <div className="font-mono text-sm text-[#475569] mt-1">Technologies</div>
                   </div>
                 </div>
               </div>
@@ -301,7 +301,7 @@ export default function Home() {
         <section id="skills" className="py-32">
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="text-center mb-16">
-              <span className="font-mono text-sm text-[#2563eb] uppercase tracking-widest">Expertise</span>
+              <span className="font-mono text-sm text-[#1e40af] uppercase tracking-widest">Expertise</span>
               <h2 className="font-display text-huge font-bold mt-4 tracking-tight">
                 Tech Stack
               </h2>
@@ -322,8 +322,8 @@ export default function Home() {
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {certifications.map((cert) => (
                   <div key={cert.name} className="cert-card">
-                    <h4 className="font-medium text-[#0f172a]">{cert.name}</h4>
-                    <p className="font-mono text-xs text-[#64748b] mt-1">{cert.issuer}</p>
+                    <h4 className="font-medium text-[#1e3a5f]">{cert.name}</h4>
+                    <p className="font-mono text-xs text-[#475569] mt-1">{cert.issuer}</p>
                   </div>
                 ))}
               </div>
@@ -340,11 +340,11 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-12">
               <div>
-                <span className="font-mono text-sm text-[#2563eb] uppercase tracking-widest">Portfolio</span>
+                <span className="font-mono text-sm text-[#1e40af] uppercase tracking-widest">Portfolio</span>
                 <h2 className="font-display text-huge font-bold mt-4 tracking-tight">
                   Featured Projects
                 </h2>
-                <p className="text-[#64748b] mt-4 max-w-lg">
+                <p className="text-[#475569] mt-4 max-w-lg">
                   {projects.length} hands-on projects showcasing DevOps, data engineering, and cloud infrastructure skills.
                 </p>
               </div>
@@ -399,18 +399,18 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-16">
               <div>
-                <span className="font-mono text-sm text-[#2563eb] uppercase tracking-widest">Contact</span>
+                <span className="font-mono text-sm text-[#1e40af] uppercase tracking-widest">Contact</span>
                 <h2 className="font-display text-huge font-bold mt-4 tracking-tight">
                   Let&apos;s Build<br />
                   <span className="gradient-text">Something Great</span>
                 </h2>
-                <p className="text-[#64748b] mt-6 max-w-md text-lg leading-relaxed">
+                <p className="text-[#475569] mt-6 max-w-md text-lg leading-relaxed">
                   I&apos;m currently looking for junior cloud and DevOps roles, internships,
                   or collaborative projects. If my work looks interesting, let&apos;s connect!
                 </p>
 
                 <div className="mt-8 flex items-center gap-4">
-                  <div className="w-px h-12 bg-[#e2e8f0]" />
+                  <div className="w-px h-12 bg-[#bae6fd]" />
                   <p className="font-display text-xl text-[#06b6d4] italic">
                     &quot;Learning fast, building faster.&quot;
                   </p>
@@ -425,8 +425,8 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <div className="font-mono text-xs text-[#64748b] uppercase tracking-wider">Email</div>
-                    <div className="font-medium mt-1 group-hover:text-[#2563eb] transition">Teemu.Rekiranta1@gmail.com</div>
+                    <div className="font-mono text-xs text-[#475569] uppercase tracking-wider">Email</div>
+                    <div className="font-medium mt-1 group-hover:text-[#1e40af] transition">Teemu.Rekiranta1@gmail.com</div>
                   </div>
                 </a>
 
@@ -437,8 +437,8 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <div className="font-mono text-xs text-[#64748b] uppercase tracking-wider">LinkedIn</div>
-                    <div className="font-medium mt-1 group-hover:text-[#2563eb] transition">teemurekiranta</div>
+                    <div className="font-mono text-xs text-[#475569] uppercase tracking-wider">LinkedIn</div>
+                    <div className="font-medium mt-1 group-hover:text-[#1e40af] transition">teemurekiranta</div>
                   </div>
                 </a>
 
@@ -449,8 +449,8 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <div className="font-mono text-xs text-[#64748b] uppercase tracking-wider">GitHub</div>
-                    <div className="font-medium mt-1 group-hover:text-[#2563eb] transition">Rekiranta</div>
+                    <div className="font-mono text-xs text-[#475569] uppercase tracking-wider">GitHub</div>
+                    <div className="font-medium mt-1 group-hover:text-[#1e40af] transition">Rekiranta</div>
                   </div>
                 </a>
 
@@ -462,7 +462,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <div className="font-mono text-xs text-[#64748b] uppercase tracking-wider">Location</div>
+                    <div className="font-mono text-xs text-[#475569] uppercase tracking-wider">Location</div>
                     <div className="font-medium mt-1">Helsinki, Finland</div>
                   </div>
                 </div>
@@ -474,12 +474,12 @@ export default function Home() {
         {/* ================================================================
             FOOTER
             ================================================================ */}
-        <footer className="border-t border-[#e2e8f0] py-12">
+        <footer className="border-t border-[#bae6fd] py-12">
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="flex items-center gap-4">
-                <span className="font-display text-xl font-bold">TR<span className="text-[#2563eb]">.</span></span>
-                <span className="text-[#64748b] text-sm">© {new Date().getFullYear()} Teemu Rekiranta</span>
+                <span className="font-display text-xl font-bold">TR<span className="text-[#1e40af]">.</span></span>
+                <span className="text-[#475569] text-sm">© {new Date().getFullYear()} Teemu Rekiranta</span>
               </div>
               <div className="flex items-center gap-8">
                 <a href="https://github.com/Rekiranta" target="_blank" rel="noreferrer" className="link-underline text-sm">GitHub</a>
@@ -496,8 +496,8 @@ export default function Home() {
       <div className={`mobile-menu ${mobileMenuOpen ? "open" : ""}`}>
         <div className="p-6">
           <div className="flex items-center justify-between mb-12">
-            <span className="font-display text-xl font-bold">TR<span className="text-[#2563eb]">.</span></span>
-            <button onClick={() => setMobileMenuOpen(false)} className="p-2 text-[#64748b] hover:text-[#0f172a]">
+            <span className="font-display text-xl font-bold">TR<span className="text-[#1e40af]">.</span></span>
+            <button onClick={() => setMobileMenuOpen(false)} className="p-2 text-[#475569] hover:text-[#1e3a5f]">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
               </svg>
@@ -509,17 +509,17 @@ export default function Home() {
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block font-display text-2xl font-semibold hover:text-[#2563eb] transition"
+                className="block font-display text-2xl font-semibold hover:text-[#1e40af] transition"
               >
                 {item}
               </a>
             ))}
           </nav>
-          <div className="mt-12 pt-8 border-t border-[#e2e8f0] space-y-4">
-            <a href="https://github.com/Rekiranta" target="_blank" rel="noreferrer" className="block font-mono text-sm text-[#64748b] hover:text-[#2563eb]">
+          <div className="mt-12 pt-8 border-t border-[#bae6fd] space-y-4">
+            <a href="https://github.com/Rekiranta" target="_blank" rel="noreferrer" className="block font-mono text-sm text-[#475569] hover:text-[#1e40af]">
               GitHub →
             </a>
-            <a href="https://linkedin.com/in/teemurekiranta" target="_blank" rel="noreferrer" className="block font-mono text-sm text-[#64748b] hover:text-[#2563eb]">
+            <a href="https://linkedin.com/in/teemurekiranta" target="_blank" rel="noreferrer" className="block font-mono text-sm text-[#475569] hover:text-[#1e40af]">
               LinkedIn →
             </a>
           </div>
@@ -564,20 +564,20 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       <div className={`category-badge ${badgeClass[project.category]} mb-4`}>
         {project.category}
       </div>
-      <h3 className="font-display text-xl font-semibold group-hover:text-[#2563eb] transition pr-16">
+      <h3 className="font-display text-xl font-semibold group-hover:text-[#1e40af] transition pr-16">
         {project.title}
       </h3>
-      <p className="text-[#64748b] text-sm mt-3 leading-relaxed">
+      <p className="text-[#475569] text-sm mt-3 leading-relaxed">
         {project.description}
       </p>
       <div className="flex flex-wrap gap-2 mt-4">
         {project.tech.map((t) => (
-          <span key={t} className="text-xs font-mono text-[#64748b] bg-[#f1f5f9] px-2 py-1">
+          <span key={t} className="text-xs font-mono text-[#475569] bg-[#f0f9ff] px-2 py-1">
             {t}
           </span>
         ))}
       </div>
-      <div className="flex items-center gap-2 mt-6 text-sm font-medium text-[#2563eb] opacity-0 group-hover:opacity-100 transition">
+      <div className="flex items-center gap-2 mt-6 text-sm font-medium text-[#1e40af] opacity-0 group-hover:opacity-100 transition">
         View project
         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
