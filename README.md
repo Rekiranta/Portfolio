@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Teemu Rekiranta - Portfolio Website
+
+Personal portfolio website showcasing my skills, projects, and experience as a Junior Cloud and DevOps Engineer.
+
+## Live Sections
+
+- **Hero** - Introduction and contact information
+- **About** - Background and career transition story
+- **Tech Stack** - Skills organized by category with badges
+- **Certifications** - Cloud and data certifications
+- **Projects** - Featured DevOps and data engineering projects
+- **Contact** - Links to email, LinkedIn, and GitHub
+
+## Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| Next.js 16 | React framework with App Router |
+| React 19 | UI components |
+| TypeScript | Type safety |
+| Tailwind CSS | Styling |
+| ESLint | Code linting |
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18+
+- npm
+
+### Installation
+
+```powershell
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```powershell
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-## Learn More
+### Production Build
 
-To learn more about Next.js, take a look at the following resources:
+```powershell
+npm run build
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Linting
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```powershell
+npm run lint
+```
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+Portfolio/
+├── app/
+│   ├── layout.tsx    # Root layout with metadata
+│   └── page.tsx      # Single-page portfolio
+├── public/           # Static assets
+├── tailwind.config.ts
+├── next.config.ts
+└── package.json
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Author
+
+**Teemu Rekiranta** - Junior Cloud and DevOps Engineer
+
+- [GitHub](https://github.com/Rekiranta)
+- [LinkedIn](https://www.linkedin.com/in/teemurekiranta)
+- Email: Teemu.Rekiranta1@gmail.com
