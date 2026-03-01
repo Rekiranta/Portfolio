@@ -14,7 +14,7 @@ const featuredProjects = [
     tech: ["Terraform", "Kubernetes", "GitHub Actions", "Docker"],
     category: "DevOps",
     color: "#ef4444",
-    url: "https://github.com/Rekiranta/My-dev-portfolio/tree/main/terraform-k8s-blueprints-ci",
+    url: "https://github.com/Rekiranta/terraform-k8s-blueprints-ci",
   },
   {
     title: "Data Pipeline ELT + dbt",
@@ -22,7 +22,7 @@ const featuredProjects = [
     tech: ["dbt", "PostgreSQL", "Python", "Docker"],
     category: "Data",
     color: "#3b82f6",
-    url: "https://github.com/Rekiranta/My-dev-portfolio/tree/main/data-pipeline-elt-dbt",
+    url: "https://github.com/Rekiranta/data-pipeline-elt-dbt",
   },
   {
     title: "BuildWatch CI Monitor",
@@ -38,7 +38,7 @@ const featuredProjects = [
     tech: ["FastAPI", "Redis", "Pytest", "Docker"],
     category: "API",
     color: "#a855f7",
-    url: "https://github.com/Rekiranta/My-dev-portfolio/tree/main/fastapi-redis-cache-api",
+    url: "https://github.com/Rekiranta/fastapi-redis-cache-api",
   },
 ];
 
